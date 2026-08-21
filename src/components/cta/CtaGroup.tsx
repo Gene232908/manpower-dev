@@ -56,21 +56,21 @@ export function CtaGroup({
     <div
       data-testid="cta-group"
       className={cn(
-        "flex gap-3",
+        "flex",
         // In the page body the buttons stack and fill the column. In the
         // header they must size to their content: `w-full` there made the
         // group claim 413px of a 1216px container, which is what pushed the
         // whole header row past the container and forced the nav to wrap.
-        compact ? "w-auto items-center" : "w-full flex-col",
+        compact ? "w-auto items-center gap-2" : "w-full flex-col gap-3",
         className,
       )}
     >
       <div
         className={cn(
-          "flex gap-3",
+          "flex",
           compact
-            ? "flex-row flex-nowrap"
-            : "flex-col sm:flex-row sm:flex-wrap",
+            ? "flex-row flex-nowrap gap-2"
+            : "flex-col gap-3 sm:flex-row sm:flex-wrap",
         )}
       >
         {showJobSeeker && (
