@@ -41,7 +41,7 @@ export function SiteImage({
         )}
       >
         <p className="px-6 text-center text-sm text-ink-muted">
-          Awaiting client content: {slot.label}
+          Awaiting Sir Jerome&apos;s content: {slot.label}
           {slot.note && (
             <span className="mt-1 block text-xs text-ink-muted">
               {slot.note}

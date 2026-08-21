@@ -38,14 +38,14 @@ export const IMAGES = {
     label: "hero photograph",
     src: "",
     alt: "",
-    note: "Real workforce imagery — supplied separately by the client. Stock photography is authorised as an interim.",
+    note: "Real workforce imagery — supplied separately by Sir Jerome. Stock photography is authorised as an interim.",
   },
   aboutTeam: {
     key: "about-team",
     label: "team photograph",
     src: "",
     alt: "",
-    note: "Supplied separately by the client. Stock photography is authorised as an interim.",
+    note: "Supplied separately by Sir Jerome. Stock photography is authorised as an interim.",
   },
 } as const satisfies Record<string, ImageSlot>;
 

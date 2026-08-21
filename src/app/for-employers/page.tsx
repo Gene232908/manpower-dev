@@ -57,7 +57,7 @@ export default function ForEmployersPage() {
         <EmptySlot
           className="mt-6"
           label="manpower categories list"
-          note="Client is sending this as a separate file. The employer selector built on it is Developer 2's scope."
+          note="Sir Jerome is sending this as a separate file. The employer selector built on it is Developer 2's scope."
         />
       </Section>
 

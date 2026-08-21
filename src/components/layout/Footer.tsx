@@ -21,7 +21,7 @@ function ContactRow({ label, value }: { label: string; value: string }) {
           data-empty-slot={label.toLowerCase()}
           className="text-ink-inverse/70 italic"
         >
-          Awaiting client details
+          Awaiting Sir Jerome&apos;s details
         </span>
       )}
     </li>

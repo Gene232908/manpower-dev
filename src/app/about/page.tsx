@@ -69,7 +69,7 @@ export default function AboutPage() {
           <EmptySlot
             className="mt-6"
             label="certifications and licences"
-            note="Client answered “TBD” on the intake form."
+            note="Sir Jerome answered “TBD” on the intake form."
           />
         )}
       </Section>
