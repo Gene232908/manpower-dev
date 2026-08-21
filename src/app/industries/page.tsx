@@ -52,7 +52,7 @@ export default function IndustriesPage() {
           <EmptySlot
             className="mt-6 bg-surface"
             label="partner and client names"
-            note="Client answered “TBD, please remind me to send this.”"
+            note="Sir Jerome answered “TBD, please remind me to send this.”"
           />
         )}
       </Section>

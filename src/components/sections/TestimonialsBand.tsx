@@ -37,7 +37,7 @@ export function TestimonialsBand({ heading }: { heading: string }) {
         <EmptySlot
           className="mt-8"
           label="testimonials"
-          note="Client answered “TBD, please remind me” — no reviews invented."
+          note="Sir Jerome answered “TBD, please remind me” — no reviews invented."
         />
       )}
     </Section>
