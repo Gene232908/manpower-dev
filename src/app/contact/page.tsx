@@ -21,7 +21,7 @@ function DetailRow({ label, value }: { label: string; value: string }) {
         ) : (
           <span
             data-empty-slot={label.toLowerCase()}
-            className="italic text-ink-muted/70"
+            className="italic text-ink-muted"
           >
             Awaiting client details
           </span>

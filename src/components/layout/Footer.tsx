@@ -19,7 +19,7 @@ function ContactRow({ label, value }: { label: string; value: string }) {
       ) : (
         <span
           data-empty-slot={label.toLowerCase()}
-          className="text-ink-inverse/40 italic"
+          className="text-ink-inverse/70 italic"
         >
           Awaiting client details
         </span>
