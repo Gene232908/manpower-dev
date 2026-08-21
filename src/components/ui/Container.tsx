@@ -4,8 +4,24 @@ import { cn } from "@/lib/cn";
 type ContainerProps = {
   children: ReactNode;
   className?: string;
-  /** Narrower measure for long-form reading columns. */
-  size?: "default" | "narrow";
+  /**
+   * `narrow`  — long-form reading columns (legal text, single-column body copy).
+   * `default` — every card grid, stats/testimonials band, and CTA band. Kept at
+   *             a comfortable measure on purpose: at very wide viewports a 3-up
+   *             card grid just gets sparser (not more columns), and a paragraph
+   *             stretched across 1600px is materially harder to read.
+   * `wide`    — the header row and the home hero only, where the content is
+   *             either a big split layout (headline + image) or has its own
+   *             internal spacing logic (the nav), so extra width helps instead
+   *             of just adding empty gaps.
+   */
+  size?: "default" | "narrow" | "wide";
+};
+
+const maxWidth: Record<NonNullable<ContainerProps["size"]>, string> = {
+  narrow: "max-w-3xl",
+  default: "max-w-7xl",
+  wide: "max-w-[1600px]",
 };
 
 /**
@@ -14,13 +30,7 @@ type ContainerProps = {
  */
 export function Container({ children, className, size = "default" }: ContainerProps) {
   return (
-    <div
-      className={cn(
-        "mx-auto w-full px-5 sm:px-6 lg:px-8",
-        size === "narrow" ? "max-w-3xl" : "max-w-7xl",
-        className,
-      )}
-    >
+    <div className={cn("mx-auto w-full px-5 sm:px-6 lg:px-8", maxWidth[size], className)}>
       {children}
     </div>
   );
