@@ -1,6 +1,5 @@
 import { test, expect, type Page, type ConsoleMessage } from "@playwright/test";
 import { NAV, CTA } from "../src/config/site.config";
-import { content } from "../src/content";
 import { showsFullNav } from "./support/viewport";
 
 /**
