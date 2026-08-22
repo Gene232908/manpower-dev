@@ -110,6 +110,9 @@ export function Footer() {
           <p className="mt-3 text-xs text-ink-inverse/50">
             © {year} {content.brand.name}. All rights reserved.
           </p>
+          <p className="mt-1 text-xs text-ink-inverse/50">
+            Developed by CREServices Beyond Strategy
+          </p>
         </div>
       </Container>
     </footer>
