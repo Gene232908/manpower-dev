@@ -65,7 +65,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-surface/90 backdrop-blur">
       <Container size="wide">
-        <div className="flex h-16 items-center justify-around gap-1 lg:h-20">
+        {/* justify-between below `xl`: only the brand + toggle are visible
+            there, and justify-around split them both toward the center
+            instead of pinning them to the edges. justify-around only from
+            `xl` on, where the nav + CTA join them — that spacing was an
+            explicit earlier request, scoped to the row that actually has
+            three things to space out. */}
+        <div className="flex h-16 items-center justify-between gap-1 lg:h-20 xl:justify-around">
           {/* Brand — text only, no mark. The infinity icon was a geometric
               placeholder for the client's real logo; removed at the client's
               request rather than left showing while the real asset is
