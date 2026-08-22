@@ -21,7 +21,11 @@ export const placeholderContent: SiteContent = {
   isPlaceholder: true,
 
   brand: {
-    name: "Company Name",
+    // Deliberate exception to "no real client content in this file": the
+    // client asked to see the real brand name from Milestone 1 onward
+    // rather than a generic placeholder, even while everything else here
+    // stays placeholder pending the Milestone 2 content swap.
+    name: "Taoohan",
     tagline: "Placeholder Tagline Goes Here In This Space",
   },
 

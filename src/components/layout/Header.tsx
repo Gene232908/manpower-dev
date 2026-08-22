@@ -7,7 +7,6 @@ import { NAV } from "@/config/site.config";
 import { content } from "@/content";
 import { Container } from "@/components/ui/Container";
 import { CtaGroup } from "@/components/cta/CtaGroup";
-import { BrandMark } from "./BrandMark";
 import { cn } from "@/lib/cn";
 
 /**
@@ -67,13 +66,15 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-hairline bg-surface/90 backdrop-blur">
       <Container size="wide">
         <div className="flex h-16 items-center justify-around gap-1 lg:h-20">
-          {/* Brand */}
+          {/* Brand — text only, no mark. The infinity icon was a geometric
+              placeholder for the client's real logo; removed at the client's
+              request rather than left showing while the real asset is
+              pending. */}
           <Link
             href="/"
             data-testid="brand-link"
             className="flex shrink-0 items-center gap-2 text-ink"
           >
-            <BrandMark className="text-brand-700" />
             <span className="text-lg font-semibold tracking-tight">
               {content.brand.name}
             </span>

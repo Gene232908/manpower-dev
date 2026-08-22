@@ -26,9 +26,19 @@ export default function HomePage() {
   return (
     <>
       {/* ---------------------------------------------------------------- HERO */}
-      <div className="border-b border-hairline bg-surface-muted">
-        <Container size="wide">
-          <div className="grid items-center gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
+      <div className="relative border-b border-hairline bg-surface-muted">
+        <Container
+          size="wide"
+          // min-h, not just padding: this section is going to carry a video
+          // background from Milestone 2 onward. Sizing it to the real target
+          // height NOW — even while it's still just placeholder copy on a
+          // flat background — means the client sees the actual hero
+          // proportions from Milestone 1, instead of being surprised by a
+          // layout jump once the video lands. Matches the header height
+          // (h-16/h-20) so hero + header fill exactly the first screen.
+          className="flex min-h-[calc(100svh-4rem)] flex-col justify-center py-16 sm:py-20 lg:min-h-[calc(100svh-5rem)] lg:py-24"
+        >
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             {/* Landing hero entrance — Developer 2 scope (Milestone 1).
                 Load-triggered, not scroll-triggered: this is above the fold on
                 every breakpoint, so a scroll reveal would never fire. Each line
