@@ -294,14 +294,20 @@ test.describe("calls to action", () => {
 // ---------------------------------------------------------------------------
 
 test.describe("placeholder copy", () => {
-  test("hero copy is placeholder and realistically sized", async ({ page }) => {
+  // The content switch normally flips to real Taoohan copy in Milestone 2.
+  // Flipped early here (still on the milestone-1 branch) at the client's own
+  // request — Sir Jerome asked to see his actual form answers during the
+  // Milestone 1 review. So this checks the REAL headline renders, not that
+  // it's still placeholder text.
+  test("hero copy is the client's real headline, not placeholder", async ({ page }) => {
     await page.goto("/");
 
     const headline = (await page.locator("h1").first().innerText()).trim();
 
     // Not tiny lorem: the real headline is ~42 chars, so demand real volume.
     expect(headline.length).toBeGreaterThan(25);
-    expect(headline.toLowerCase()).toContain("placeholder");
+    expect(headline.toLowerCase()).not.toContain("placeholder");
+    expect(headline).toBe("Bringing Great People to Great Businesses.");
   });
 
   test("services page renders the full 11-item list from the content layer", async ({

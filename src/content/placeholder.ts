@@ -152,6 +152,22 @@ export const placeholderContent: SiteContent = {
   partners: [],
   certifications: [],
 
+  // Standing UI labels — matches the shape `taoohan.ts` uses. Placeholder
+  // wording here too since this file is still someone's fallback/reference,
+  // not just dead code.
+  labels: {
+    testimonialsGeneral: "What people say",
+    testimonialsEmployers: "What employers say",
+    certifications: "Certifications and licences",
+    partners: "Partners and clients",
+    manpowerCategories: "Manpower categories you can request",
+    howToApply: "How to apply",
+    viewAllServices: "View all services",
+    footerPages: "Pages",
+    footerContact: "Contact",
+    footerOffice: "Office",
+  },
+
   disclaimer:
     "Placeholder recruitment disclaimer sentence, sized to the length of the final approved statement.",
 
