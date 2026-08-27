@@ -91,10 +91,10 @@ export function Header() {
                 announced the name twice to a screen reader. The alt text on
                 the image carries it instead.
 
-                Uses Logo's default size, which is tuned for this row: the
-                wordmark is a very wide lockup, so anything taller both reads
-                as oversized against the nav links and eats the horizontal
-                room the 7-item nav and two CTAs need at 1280px. */}
+                Uses Logo's default size, which is tuned for this row: it
+                has to stay short enough not to crowd the nav links and narrow
+                enough to leave the 7-item nav and two CTAs their room at
+                1280px, where an earlier wordmark overflowed the row. */}
             <Logo priority />
           </Link>
 

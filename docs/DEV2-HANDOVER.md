@@ -128,12 +128,18 @@ hit, not one a test caught — which is why they are worth keeping.
 ## The logo
 
 Supplied by the client and now in use, replacing the `BrandMark` placeholder
-that existed only until the file arrived. SVG over PNG: a fifth of the bytes,
-sharp at any density. `taoohan-black.svg` on the light header,
-`taoohan-white.svg` on the inverse footer (the text colour is baked into the
-artwork), and `logo.svg` as the tab icon. The `<span>Taoohan</span>` beside it
-was removed — the wordmark already says it, so it announced the name twice to a
-screen reader; the image `alt` carries it.
+that existed only until the file arrived. The client later re-supplied the set,
+so the artwork in the repo is now PNG only — the earlier SVGs are gone.
+`taoohan-black.png` on the light header, `taoohan-white.png` on the inverse
+footer (the lettering colour is baked into the artwork), and `logo.png` — the
+mark on its own — as the tab icon (`src/app/icon.png`) and the section
+watermark. The `<span>Taoohan</span>` beside it was removed — the wordmark
+already says it, so it announced the name twice to a screen reader; the image
+`alt` carries it.
+
+Both wordmark files share one intrinsic size (880x289, ~3:1). That parity is
+load-bearing — see the comment on `LOGOS` in `src/config/images.ts` before
+swapping either one.
 
 ---
 

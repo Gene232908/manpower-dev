@@ -191,7 +191,7 @@
 /* ==========================================================================
    BRAND WATERMARK
    ==========================================================================
-   The infinity mark sitting behind section content, so the brand is present
+   The brand mark sitting behind section content, so the brand is present
    down the page rather than only in the header and footer.
 
    Rendered by <Section>. Position, size and rotation vary by `:nth-of-type`,
@@ -212,12 +212,12 @@
   position: absolute;
   z-index: 0;
   pointer-events: none;
-  width: 22rem;
-  aspect-ratio: 884 / 516;
-  background-image: url("/logo/infinity.png");
+  width: 15rem;
+  aspect-ratio: 533 / 536;
+  background-image: url("/logo/logo.png");
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.09;
+  opacity: 0.07;
 }
 
 /* Odd sections only, sides alternating. Because the marks sit vertically
@@ -225,7 +225,7 @@
 section:nth-of-type(4n + 1) .brand-watermark {
   display: block;
   top: 50%;
-  right: -5rem;
+  right: -3rem;
   translate: 0 -50%;
   rotate: -8deg;
 }
@@ -233,32 +233,32 @@ section:nth-of-type(4n + 1) .brand-watermark {
 section:nth-of-type(4n + 3) .brand-watermark {
   display: block;
   top: 50%;
-  left: -5rem;
+  left: -3rem;
   translate: 0 -50%;
   rotate: 7deg;
-  width: 18rem;
+  width: 12rem;
 }
 
 /* The dark bands swallow the mark, so it needs more presence there. */
 section[data-tone="inverse"] .brand-watermark {
-  opacity: 0.14;
+  opacity: 0.11;
 }
 
 /* Phones: smaller, and always pushed off an edge so it never sits squarely
    behind a narrow column of body text. */
 @media (max-width: 640px) {
   .brand-watermark {
-    width: 13rem;
-    opacity: 0.07;
+    width: 10rem;
+    opacity: 0.06;
   }
 
   section:nth-of-type(4n + 1) .brand-watermark {
-    right: -4rem;
+    right: -3rem;
   }
 
   section:nth-of-type(4n + 3) .brand-watermark {
-    left: -4rem;
-    width: 12rem;
+    left: -3rem;
+    width: 9rem;
   }
 }
 

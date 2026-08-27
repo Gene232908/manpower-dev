@@ -43,28 +43,29 @@ export const IMAGES = {
 } as const satisfies Record<string, ImageSlot>;
 
 /**
- * Brand logo files — SUPPLIED by the client, no longer a blocked slot.
+ * Brand logo files — SUPPLIED by the client.
  *
  * The wordmark bakes its text colour into the artwork, so there are two files
- * rather than one recolourable asset. The standalone infinity mark is used for
- * the browser tab icon (src/app/icon.svg).
+ * rather than one recolourable asset. The standalone mark (no lettering) is
+ * used for the browser tab icon (src/app/icon.png) and for the section
+ * watermark in globals.css.
  *
- * BOTH WORDMARK FILES ARE CROPPED TIGHT TO THE GLYPHS (~6.5:1), on purpose.
- * The height classes in `Logo` size the FILE, not the artwork inside it, so
- * transparent padding baked into one file and not the other makes the same
- * CSS height render two visibly different logo sizes in header and footer.
- * The white file shipped as a 1080x1350 canvas with the wordmark in a thin
- * band in the middle; left alone it rendered as an illegible sliver. If a
- * replacement file arrives, crop it to the glyph bounds before wiring it up
- * and update the width/height here to the real pixel dimensions.
+ * BOTH WORDMARK FILES ARE THE SAME ARTWORK AT THE SAME INTRINSIC SIZE
+ * (880x289, ~3:1) — one with dark lettering, one with white. That parity is
+ * load-bearing: the height classes in `Logo` size the FILE, not the artwork
+ * inside it, so a replacement that ships with different padding or a different
+ * canvas renders two visibly different logo sizes in header and footer off the
+ * same CSS height. The pair this replaced had exactly that problem. Crop any
+ * replacement to match its counterpart and update the width/height here to the
+ * real pixel dimensions.
  */
 export const LOGOS = {
-  /** Dark text — for light backgrounds (the header). */
-  wordmarkOnLight: { src: "/logo/taoohan.png", width: 768, height: 116 },
-  /** White text — for dark backgrounds (the footer's inverse band). */
-  wordmarkOnDark: { src: "/logo/white-taoohan.png", width: 1021, height: 154 },
-  /** The infinity mark on its own, no wordmark. */
-  mark: "/logo/infinity.png",
+  /** Dark lettering — for light backgrounds (the header). */
+  wordmarkOnLight: { src: "/logo/taoohan-black.png", width: 880, height: 289 },
+  /** White lettering — for dark backgrounds (the footer inverse band). */
+  wordmarkOnDark: { src: "/logo/taoohan-white.png", width: 880, height: 289 },
+  /** The mark on its own, no lettering. Effectively square. */
+  mark: { src: "/logo/logo.png", width: 533, height: 536 },
 } as const;
 
 /** True once a real file has been supplied for this slot. */
